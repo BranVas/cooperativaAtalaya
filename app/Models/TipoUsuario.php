@@ -10,4 +10,10 @@ class TipoUsuario extends Model
         'cargo',
         'estado_activo'
     ];
+
+    public function user_()
+{
+    return $this->hasMany(User::class,'tipo_usuario_id');
+}
+
 }

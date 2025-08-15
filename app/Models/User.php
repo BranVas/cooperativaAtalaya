@@ -3,12 +3,14 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Models\Trabajador;
+use App\Models\TipoUsuario;
+use Laravel\Sanctum\HasApiTokens;
+use Laravel\Jetstream\HasProfilePhoto;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
-use Laravel\Jetstream\HasProfilePhoto;
-use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
@@ -29,7 +31,19 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'estado_activo',
+        'tipo_usuario_id',
     ];
+
+public function trabajador_()
+{
+    return $this->hasOne(Trabajador::class,'user_id');
+}
+public function tipoUsuario_()
+{
+    return $this->belongsTo(TipoUsuario::class,'tipo_usuario_id');
+}
+
 
     /**
      * The attributes that should be hidden for serialization.

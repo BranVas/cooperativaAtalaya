@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->text('two_factor_secret')
-                ->after('password')
+                ->after('profile_photo_path')
                 ->nullable();
 
             $table->text('two_factor_recovery_codes')

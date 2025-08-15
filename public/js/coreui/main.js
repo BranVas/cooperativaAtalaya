@@ -7,8 +7,6 @@
  * --------------------------------------------------------------------------
  */
 
-
-
 // Disable the on-canvas tooltip
 Chart.defaults.pointHitDetectionRadius = 1
 Chart.defaults.plugins.tooltip.enabled = false

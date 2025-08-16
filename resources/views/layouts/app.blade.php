@@ -6,12 +6,11 @@
 
     <title>{{ config('app.name') }}</title>
 
-    @vite(['resources/sass/app.scss', 'resources/js/app.js']) <!-- estilos/js -->
-    {{-- @livewireStyles <!-- Livewire CSS --> --}}
+    @vite(['resources/sass/app.scss', 'resources/js/app.js', ]) <!-- estilos/js/css generales -->
+
 </head>
+
 <body>
     {{ $slot }} <!-- Aquí se renderizan las vistas -->
-    
-    {{-- @livewireScripts <!-- Livewire JS --> ver donde puse la otra instancia --}}
 </body>
 </html>

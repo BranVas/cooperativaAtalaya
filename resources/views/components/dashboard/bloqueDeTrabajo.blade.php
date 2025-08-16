@@ -1,0 +1,12 @@
+<div>
+  <x-dashboard.cabecera>
+    </x-dashboard.cabecera>
+</div>
+<div>
+      <x-dashboard.areaDeTrabajo>
+    </x-dashboard.areaDeTrabajo>
+</div>
+<div>
+      <x-dashboard.footer>
+    </x-dashboard.footer>
+</div>
